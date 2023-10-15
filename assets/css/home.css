@@ -1,0 +1,7 @@
+body {
+  background-color: beige; }
+  body .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; }
