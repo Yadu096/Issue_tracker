@@ -6,6 +6,7 @@ const sassMiddleware = require('node-sass-middleware');
 const expressLayouts = require('express-ejs-layouts');
 // const flash = require('connect-flash');
 // const customFlashMiddleware = require('./config/flash-middleware');
+const db = require('./config/mongoose');
 
 
 //Configure Node-SASS-Middleware

@@ -1,5 +1,12 @@
-module.exports.home = function(req, res){
+const Project = require('../model/projects');
+
+module.exports.home = async function(req, res){
+
+    //Get the projects
+    const projects = await Project.find({});
+
     return res.render('home',{
-        title: "Home"
+        title: "Home",
+        projects: projects
     });    
 }

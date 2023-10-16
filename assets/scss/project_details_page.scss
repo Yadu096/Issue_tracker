@@ -1,5 +1,5 @@
 body{
-    background-color: aqua;
+    background-color:aquamarine;
 
     .flex-container{
         display: flex;
@@ -8,8 +8,8 @@ body{
         padding: 20px;
         gap: 20px;
 
-        ul>li{
-            background-color: aqua;
+        ul >li {
+            background-color: aquamarine;
         }
     }
 }
