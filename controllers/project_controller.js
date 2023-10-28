@@ -1,7 +1,7 @@
 const Project = require('../model/projects');
 
 module.exports.createPage = function(req, res){
-    return res.render('create_project', {
+    return res.render('create_project_page', {
         title: "Create Project"
     });
 }
@@ -37,7 +37,7 @@ module.exports.createProject = async function(req, res){
 
 module.exports.detailsPage = async function(req, res){
     try{
-        let project = await Project.findById(req.params.id);
+        let project = await Project.findById(req.params.id).populate('issues');
         return res.render('project_details_page',{
             title: "Project details",
             project: project

@@ -12,7 +12,11 @@ const projectsSchema = new mongoose.Schema({
     author:{
         type: String,
         required: true
-    }
+    },
+    issues: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Issue'
+    }]
 },{
     timestamps: true
 });

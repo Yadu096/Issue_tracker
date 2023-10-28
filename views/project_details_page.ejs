@@ -22,9 +22,13 @@
                         <div class="card-body">
                             <h3>Issues:</h3>
                             <ol class="list-group list-group-numbered">
-                                <li class="list-group-item">Issue 1</li>
-                                <li class="list-group-item">Issue 2</li>
-                                <li class="list-group-item">Issue 3</li>
+                                <% for(let issue of project.issues){%>
+                                    <li class="list-group-item">
+                                        <h5><%= issue.title %></h5>
+                                        <p class="card-text"><%= issue.description %></p>
+                                        <p class="text-muted"><%= issue.author %></p>
+                                    </li>
+                                <%} %>
                             </ol>
                         </div>
                     </div>
@@ -32,6 +36,6 @@
         </ul>        
     </div>
     <div>
-        <a href="/issues/create-page" class="btn btn-outline-dark">Create Issue</a>
+        <a href="/issues/create-page/<%= project._id %>" class="btn btn-outline-dark">Create Issue</a>
     </div>
 </div>
